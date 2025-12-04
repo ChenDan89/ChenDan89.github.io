@@ -805,6 +805,10 @@ footer.sticky-bottom {
             border-bottom: 1px dashed var(--global-text-color);
           }
         }
+
+        .self-author {
+          color: var(--global-highlight-color);
+        }
       }
 
       .links {

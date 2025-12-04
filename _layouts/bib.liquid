@@ -51,19 +51,37 @@
     <div class="title">{{ entry.title }}</div>
     <!-- Author -->
     <div class="author">
+      {% assign self_index = null %}
+      {% assign idx = 0 %}
+      {% for author in entry.author_array %}
+        {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
+        {% assign author_first_clean = author.first | replace: ' (corresponding author)', '' %}
+        {% if site.scholar.last_name contains author_last_name and site.scholar.first_name contains author_first_clean %}
+          {% if self_index == null %}
+            {% assign self_index = idx %}
+          {% endif %}
+        {% endif %}
+        {% assign idx = idx | plus: 1 %}
+      {% endfor %}
+
       {% assign author_array_size = entry.author_array | size %}
 
       {% assign author_array_limit = author_array_size %}
       {% if site.max_author_limit and author_array_size > site.max_author_limit %}
         {% assign author_array_limit = site.max_author_limit %}
       {% endif %}
+      {% if self_index != null and self_index >= author_array_limit %}
+        {% assign author_array_limit = self_index | plus: 1 %}
+      {% endif %}
 
       {%- for author in entry.author_array limit: author_array_limit -%}
         {% assign author_is_self = false %}
         {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
         {%- assign author_last_html = author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
+        {% assign author_first_clean = author.first | replace: ' (corresponding author)', '' %}
+
         {% if site.scholar.last_name contains author_last_name %}
-          {% if site.scholar.first_name contains author.first %}
+          {% if site.scholar.first_name contains author_first_clean %}
             {% assign author_is_self = true %}
           {% endif %}
         {%- endif -%}
@@ -71,12 +89,22 @@
         {%- assign clean_last_name = author_last_name | downcase | remove_accents -%}
         {% if site.data.coauthors[clean_last_name] %}
           {%- for coauthor in site.data.coauthors[clean_last_name] -%}
-            {% if coauthor.firstname contains author.first %}
+            {% if coauthor.firstname contains author_first_clean %}
               {%- assign coauthor_url = coauthor.url -%}
               {% break %}
             {%- endif -%}
           {% endfor %}
         {%- endif -%}
+
+        {% assign mark_corresponding = false %}
+        {% if author_is_self and self_index != null and self_index > 0 %}
+          {% assign mark_corresponding = true %}
+        {% endif %}
+        {% capture author_full_name %}
+          {{- author_first_clean }} {{ author_last_html -}}
+          {% if mark_corresponding %} (corresponding author){% endif %}
+        {% endcapture %}
+        {% assign author_full_name = author_full_name | strip %}
 
         {%- if forloop.length > 1 -%}
           {% if forloop.first == false -%}
@@ -85,19 +113,14 @@
           {%- if forloop.last and author_array_limit == author_array_size %}and {% endif -%}
         {% endif %}
         {%- if author_is_self -%}
-          <strong>
-            {{- author.first }}
-            {{ author_last_html -}}
-          </strong>
+          <strong class="self-author">{{ author_full_name }}</strong>
         {%- else -%}
           {%- if coauthor_url -%}
             <a href="{{ coauthor_url }}">
-              {{- author.first }}
-              {{ author_last_html -}}
+              {{- author_full_name -}}
             </a>
           {%- else -%}
-            {{- author.first }}
-            {{ author_last_html -}}
+            {{- author_full_name -}}
           {% endif %}
         {%- endif -%}
       {% endfor %}
@@ -110,7 +133,17 @@
         {%- endif -%}
         {% assign more_authors_show = '' %}
         {%- for author in entry.author_array offset: author_array_limit -%}
-          {% assign more_authors_show = more_authors_show | append: author.first | append: ' ' | append: author.last %}
+          {% assign author_first_clean = author.first | replace: ' (corresponding author)', '' %}
+          {% assign current_index = forloop.index0 | plus: author_array_limit %}
+          {% assign mark_corresponding = false %}
+          {% if current_index == self_index and self_index > 0 %}
+            {% assign mark_corresponding = true %}
+          {% endif %}
+          {% assign author_name = author_first_clean | append: ' ' | append: author.last %}
+          {% if mark_corresponding %}
+            {% assign author_name = author_name | append: ' (corresponding author)' %}
+          {% endif %}
+          {% assign more_authors_show = more_authors_show | append: author_name %}
           {% unless forloop.last %}
             {% assign more_authors_show = more_authors_show | append: ', ' %}
           {% endunless %}
