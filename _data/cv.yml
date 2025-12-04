@@ -2,96 +2,89 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Dan Chen (陈聃)
     - name: Date of Birth
-      value: 14th March 1879
+      value: November 1996
+    - name: Email
+      value: danchen@nus.edu.sg
+    - name: Phone
+      value: +65 158-270-53862
     - name: Languages
-      value: English, German
+      value: Chinese (native), English (fluent)
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Ph.D. in Computer Science and Technology
+      institution: Huazhong University of Science and Technology (HUST), Wuhan, China
+      year: 2018 - 2024
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - Advisor — Prof. Hai Jin (IEEE/CCF Fellow)
+        - Research on AI system acceleration and near-memory computing for graph, sparse, and LLM workloads.
+    - title: B.Eng. in Computer Science and Technology
+      institution: North China Electric Power University (NCEPU), Beijing, China
+      year: 2014 - 2018
       description:
-        - Description 1.
-        - Description 2.
+        - Graduated first in major; direct admission to graduate studies.
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Research Fellow, School of Computing
+      institution: National University of Singapore (NUS)
+      year: 2024.03 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
+        - Working with Prof. Tulika Mitra on AI system acceleration and software–hardware co-design.
+        - Focused on heterogeneous near-memory systems, LLM/RAG acceleration, sparse operators, and graph workloads.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: Green AI Project — Core Member
+      institution: NUS / Data Center Computation & Communication for Green AI
+      year: 2024.03 - Present
+      description:
+        - Designed near-memory architectures for LLM and RAG, targeting low energy and high performance (results in TC, ISCA).
+        - Built general near-memory architectures for sparse operators and attention, with emphasis on cost efficiency.
+    - title: Graph Computing Accelerator Design — Core Member
+      institution: Zhejiang Lab Joint Graph Computing Research Center (~¥80M)
+      year: 2021.12 - 2024.03
+      description:
+        - Led graph computing framework and parallel programming abstractions.
+        - Developed heterogeneous near-memory accelerators for HGNNs and dynamic graphs (e.g., ISCA'23, IPDPS'23).
+    - title: Processing-in-Memory Systems for Graph Computing — Core Member
+      institution: National Key R&D Program “Cloud Computing and Big Data” (~¥40M)
+      year: 2018.05 - 2022.01
+      description:
+        - Designed general PIM offloading techniques ensuring accuracy across domains (IPDPS'22).
+        - Built heterogeneous GPU+PIM platforms for GNN acceleration (TC).
+    - title: Parallel and Distributed Computing — Core Member
+      institution: National Natural Science Foundation Distinguished Young Project (~¥4M)
+      year: 2019.01 - 2022.12
+      description:
+        - Developed the first asynchronous dynamic graph processing system with >5× speedup over state of the art (SC'22).
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2023
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - chip100 World Chip Contribution List (2022–2023)
+    - year: 2022
       items:
-        - Max Planck Medal
+        - China International “Internet+” Innovation & Entrepreneurship Competition — Gold Award
+    - year: 2017
+      items:
+        - China Engineering Robotics Competition — Special Prize
+        - Mathematical Contest in Modeling (MCM) — Meritorious Winner
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: AI system acceleration
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Near-memory computing for LLM, RAG, and sparse operators.
+        - Specialized architectures for graph analytics and GNNs.
+    - title: Software–hardware co-design
       items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+        - Heterogeneous systems, energy-efficient architecture optimization, and scalable runtime support.
