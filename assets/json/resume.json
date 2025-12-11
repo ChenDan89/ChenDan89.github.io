@@ -53,84 +53,13 @@
     },
     {
       "institution": "North China Electric Power University (NCEPU)",
-      "location": "Beijing, China",
+      "location": "Baoding, China",
       "url": "https://english.ncepu.edu.cn/",
       "area": "Computer Science and Technology",
       "studyType": "B.Eng.",
       "startDate": "2014-09-01",
       "endDate": "2018-06-01",
-      "score": "",
-      "courses": ["Graduated first in major; direct admission to graduate studies."]
-    }
-  ],
-  "projects": [
-    {
-      "name": "Green AI — Near-Memory Architectures for LLM and RAG",
-      "summary": "Designed near-memory architectures for LLM and retrieval-augmented generation, achieving low energy and high performance.",
-      "highlights": ["Developed specialized near-memory pipelines for LLM/RAG workloads.", "Results published in TC and ISCA venues."],
-      "startDate": "2024-03-01",
-      "endDate": "",
-      "url": ""
-    },
-    {
-      "name": "Graph Computing Accelerator Design",
-      "summary": "Core member at Zhejiang Lab Joint Graph Computing Research Center (~¥80M). Built frameworks and programming abstractions for graph computing accelerators.",
-      "highlights": [
-        "Led heterogeneous near-memory accelerator designs for HGNNs and dynamic graphs.",
-        "Contributions appeared in ISCA'23 and IPDPS'23."
-      ],
-      "startDate": "2021-12-01",
-      "endDate": "2024-03-01",
-      "url": ""
-    },
-    {
-      "name": "Processing-in-Memory Systems for Graph Computing",
-      "summary": "National Key R&D Program “Cloud Computing and Big Data” (~¥40M).",
-      "highlights": [
-        "Designed general PIM offloading techniques ensuring accuracy across domains (IPDPS'22).",
-        "Built heterogeneous GPU+PIM platforms for GNN acceleration (TC)."
-      ],
-      "startDate": "2018-05-01",
-      "endDate": "2022-01-01",
-      "url": ""
-    },
-    {
-      "name": "Parallel and Distributed Computing",
-      "summary": "National Natural Science Foundation Distinguished Young Project (~¥4M).",
-      "highlights": ["Developed the first asynchronous dynamic graph processing system with >5× speedup over state of the art (SC'22)."],
-      "startDate": "2019-01-01",
-      "endDate": "2022-12-01",
-      "url": ""
-    }
-  ],
-  "awards": [
-    {
-      "title": "chip100 World Chip Contribution List",
-      "date": "2023-01-01",
-      "awarder": "",
-      "url": "",
-      "summary": "Recognized in the 2022–2023 chip100 list."
-    },
-    {
-      "title": "China International “Internet+” Innovation & Entrepreneurship Competition — Gold Award",
-      "date": "2022-01-01",
-      "awarder": "",
-      "url": "",
-      "summary": ""
-    },
-    {
-      "title": "China Engineering Robotics Competition — Special Prize",
-      "date": "2017-01-01",
-      "awarder": "",
-      "url": "",
-      "summary": ""
-    },
-    {
-      "title": "Mathematical Contest in Modeling (MCM) — Meritorious Winner",
-      "date": "2017-01-01",
-      "awarder": "",
-      "url": "",
-      "summary": ""
+      "score": ""
     }
   ],
   "skills": [
@@ -145,18 +74,6 @@
       "level": "",
       "icon": "fa-solid fa-code",
       "keywords": ["Heterogeneous architectures", "Runtime and compiler co-optimization", "Energy-efficient design"]
-    }
-  ],
-  "languages": [
-    {
-      "language": "Chinese",
-      "fluency": "Native speaker",
-      "icon": ""
-    },
-    {
-      "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
     }
   ],
   "interests": [
