@@ -6,9 +6,7 @@
     - name: Date of Birth
       value: November 1996
     - name: Email
-      value: danchen@nus.edu.sg
-    - name: Phone
-      value: +86 158-2705-3862
+      value: danhust9986@gmail.com
     - name: Languages
       value: Chinese (native), English (fluent)
 
@@ -30,11 +28,16 @@
 - title: Experience
   type: time_table
   contents:
-    - title: Research Fellow, School of Computing
-      institution: National University of Singapore (NUS)
-      year: 2024.03 - Present
+    - title: Architect, AI Computing
+      institution: Black Sesame Technologies
+      year: 2026.05 - Present
       description:
-        - Working with Prof. Tulika Mitra on AI system acceleration and software–hardware co-design.
+        - Developing AI agents for automated chip design-space exploration and compute-kernel optimization.
+    - title: Postdoctoral Research Fellow, School of Computing
+      institution: National University of Singapore (NUS)
+      year: 2024.03 - 2026.04
+      description:
+        - Worked with Prof. Tulika Mitra on AI system acceleration and software–hardware co-design.
         - Focused on heterogeneous near-memory systems, LLM/RAG acceleration, sparse operators, and graph workloads.
 
 - title: Academic Interests
