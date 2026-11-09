@@ -1,12 +1,11 @@
 {
   "basics": {
     "name": "Dan Chen",
-    "label": "Research Fellow",
+    "label": "Architect, AI Computing",
     "image": "",
-    "email": "danchen@nus.edu.sg",
-    "phone": "+86 158-2705-3862",
+    "email": "danhust9986@gmail.com",
     "url": "",
-    "summary": "Research Fellow at the School of Computing, National University of Singapore (NUS). I design energy-efficient, high-performance AI systems through software–hardware co-design, focusing on near-memory computing and specialized architectures for emerging AI workloads.",
+    "summary": "Architect in AI Computing at Black Sesame Technologies. I work on AI infrastructure, compute architecture, and automated chip design-space exploration and compute-kernel optimization.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -17,19 +16,28 @@
     "profiles": [
       {
         "network": "Email",
-        "username": "danchen@nus.edu.sg",
-        "url": "mailto:danchen@nus.edu.sg"
+        "username": "danhust9986@gmail.com",
+        "url": "mailto:danhust9986@gmail.com"
       }
     ]
   },
   "work": [
     {
+      "name": "Black Sesame Technologies",
+      "position": "Architect, AI Computing",
+      "url": "https://www.blacksesame.com/en/",
+      "startDate": "2026-05-01",
+      "endDate": "",
+      "summary": "Developing AI agents for automated chip design-space exploration and compute-kernel optimization.",
+      "highlights": []
+    },
+    {
       "name": "National University of Singapore (NUS), School of Computing",
-      "position": "Research Fellow",
+      "position": "Postdoctoral Research Fellow",
       "url": "https://www.comp.nus.edu.sg/",
       "startDate": "2024-03-01",
-      "endDate": "",
-      "summary": "Working with Prof. Tulika Mitra on AI system acceleration and architectural optimization.",
+      "endDate": "2026-04-30",
+      "summary": "Worked with Prof. Tulika Mitra on AI system acceleration and architectural optimization.",
       "highlights": [
         "Heterogeneous near-memory systems and specialized architectures for LLM/RAG acceleration.",
         "Energy-efficient designs for sparse operators and graph workloads via software–hardware co-design."
